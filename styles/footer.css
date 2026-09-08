@@ -29,3 +29,14 @@ footer {
     }
   }
 }
+
+@media (width > 85.375em) {
+  footer {
+    margin-top: 2.25rem;
+    margin-bottom: 0;
+
+    .questions {
+      max-width: 24.125rem;
+    }
+  }
+}

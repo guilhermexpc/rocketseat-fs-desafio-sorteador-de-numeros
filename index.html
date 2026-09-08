@@ -20,74 +20,76 @@
       <img src="/assets/logo.svg" alt="Logo numbers" />
       <span>NUMBERS</span>
     </div>
-    <header class="container container-base">
-      <h2>ONLINE - GRATUITO</h2>
-      <h1>SORTEADOR DE NÚMEROS</h1>
-    </header>
+    <div class="container">
+      <header class="container-base">
+        <h2>ONLINE - GRATUITO</h2>
+        <h1>SORTEADOR DE NÚMEROS</h1>
+      </header>
 
-    <main class="container container-base">
-      <form action="">
-        <div id="draw-info">
-          <h2>Quero sortear:</h2>
-          <p>
-            Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
-            fácil!
-          </p>
-        </div>
-        <fieldset id="draw-values">
-          <ul role="list">
-            <li>
-              <label for="quantity" class="uppercase">Números</label>
-              <input type="number" id="quantity" name="quantity" min="1" required placeholder="5" value="2" />
-            </li>
-            <li>
-              <label for="min-value" class="uppercase">de</label>
-              <input type="number" id="min-value" name="min-value" required placeholder="1" value="1" />
-            </li>
-            <li>
-              <label for="max-value" class="uppercase">de</label>
-              <input type="number" id="max-value" name="max-value" required placeholder="100" value="100" />
-            </li>
-          </ul>
-
-          <div class="draw-option">
-            <label class="switch">
-              <input type="checkbox" id="unique-number" name="unique-number" />
-              <span class="slider round"></span>
-            </label>
-            <span class="switch-togle-text"></span>
-            <span>Não repetir número</span>
-            <label for="unique-number"></label>
-          </div>
-
-          <button type="submit">
-            <span>Sortear</span>
-            <img src="assets/icons/arrow-right.svg" alt="" />
-          </button>
-        </fieldset>
-      </form>
-    </main>
-
-    <footer class="container container-base">
-      <div class="questions">
-        <div class="card-question">
-          <img src="assets/icons/person.svg" alt="" />
-          <div class="question-info">
-            <h3>Como funciona o sorteador de números</h3>
+      <main class="container-base">
+        <form action="">
+          <div id="draw-info">
+            <h2>Quero sortear:</h2>
             <p>
-              O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado
-              pelo usuário.
+              Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
+              fácil!
             </p>
           </div>
-        </div>
-        <div class="card-question">
-          <img src="assets/icons/person.svg" alt="" />
-          <div class="question-title">
-            <h3>Posso escolher o intervalo dos números?</h3>
-            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          <fieldset id="draw-values">
+            <ul role="list">
+              <li>
+                <label for="quantity" class="uppercase">Números</label>
+                <input type="number" id="quantity" name="quantity" min="1" required placeholder="5" value="2" />
+              </li>
+              <li>
+                <label for="min-value" class="uppercase">de</label>
+                <input type="number" id="min-value" name="min-value" required placeholder="1" value="1" />
+              </li>
+              <li>
+                <label for="max-value" class="uppercase">de</label>
+                <input type="number" id="max-value" name="max-value" required placeholder="100" value="100" />
+              </li>
+            </ul>
+
+            <div class="draw-option">
+              <label class="switch">
+                <input type="checkbox" id="unique-number" name="unique-number" />
+                <span class="slider round"></span>
+              </label>
+              <span class="switch-togle-text"></span>
+              <span>Não repetir número</span>
+              <label for="unique-number"></label>
+            </div>
+
+            <button type="submit">
+              <span>Sortear</span>
+              <img src="assets/icons/arrow-right.svg" alt="" />
+            </button>
+          </fieldset>
+        </form>
+      </main>
+
+      <footer class="container-base">
+        <div class="questions">
+          <div class="card-question">
+            <img src="assets/icons/person.svg" alt="" />
+            <div class="question-info">
+              <h3>Como funciona o sorteador de números</h3>
+              <p>
+                O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo
+                especificado pelo usuário.
+              </p>
+            </div>
+          </div>
+          <div class="card-question">
+            <img src="assets/icons/person.svg" alt="" />
+            <div class="question-title">
+              <h3>Posso escolher o intervalo dos números?</h3>
+              <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

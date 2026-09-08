@@ -20,3 +20,9 @@ form #draw-info p {
     }
   }
 }
+
+@media (width > 85.375em) {
+  form {
+    max-width: 30.125rem;
+  }
+}

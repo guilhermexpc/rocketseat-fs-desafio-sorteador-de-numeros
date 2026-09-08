@@ -33,3 +33,21 @@ header {
     background-clip: text;
   }
 }
+
+@media (width > 85.375em) {
+  header {
+    margin-top: 0;
+  }
+
+  .logo {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  header h1 {
+    font: var(--font-display-large);
+  }
+}
+
+@media (width > 85.375em) {
+}

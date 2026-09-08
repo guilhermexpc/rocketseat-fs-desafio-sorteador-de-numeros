@@ -13,9 +13,8 @@
 }
 
 :root {
-  --max-width: 390px;
   font-size: 100%;
-
+  --max-width: 24.375rem;
   --px-bs: 2rem;
 
   --content-primary: #ffffff;
@@ -85,6 +84,8 @@ body {
 
 h1 {
   font: var(--font-display-medium);
+  color: var(--content-primary);
+  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
@@ -160,4 +161,55 @@ div.hidden {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+@media (width > 85.375em) {
+  :root {
+    --max-width: 85.375rem;
+    --px-bs: 8.375rem;
+  }
+
+  body {
+    display: block;
+  }
+
+  .container {
+    display: grid;
+    flex-direction: column;
+    max-width: 85.375rem;
+    margin-inline: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "header main"
+      "footer main";
+
+    margin-top: 5.625rem;
+    padding-inline: var(--px-bs);
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+  p {
+    font: var(--font-paragraph-large);
+  }
+
+  label {
+    font: var(--font-label-small);
+  }
+
+  .container-base {
+    width: 100%;
+    padding-inline: 0;
+  }
 }
