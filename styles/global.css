@@ -78,7 +78,7 @@
 
 body {
   min-height: 100vh;
-  background-color: var(--background-tertiary);
+  background-color: var(--background-primary);
   font: var(--font-paragraph-medium);
   color: var(--content-tertiary);
 }

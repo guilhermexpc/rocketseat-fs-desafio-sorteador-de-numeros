@@ -91,3 +91,32 @@ li label {
     transform: translateX(0.6rem);
   }
 }
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  height: 3rem;
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--background-tertiary);
+  font: var(--font-label-medium);
+  color: var(--content-primary);
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.4s ease;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: cover;
+  }
+
+  &:hover {
+    background-color: var(--background-secondary);
+  }
+}

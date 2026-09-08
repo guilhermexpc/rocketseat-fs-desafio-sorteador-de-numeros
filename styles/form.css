@@ -7,6 +7,8 @@ form #draw-info p {
 }
 
 #draw-values {
+  display: flex;
+  flex-direction: column;
   margin-top: 2.75rem;
 
   ul {

@@ -1,0 +1,31 @@
+footer {
+  margin-top: 5.125rem;
+  margin-bottom: 2.75rem;
+  .questions {
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+    align-items: center;
+
+    .card-question {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      justify-content: start;
+      img {
+        width: 1.25rem;
+        height: 1.25rem;
+        object-fit: cover;
+      }
+
+      h3 {
+        color: var(--content-brand);
+      }
+
+      p {
+        font: var(--font-paragraph-small);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}

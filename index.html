@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="/styles/index.css" />
   </head>
   <body>
-    <!-- <div class="container logo">
+    <div class="container logo">
       <img src="/assets/logo.svg" alt="Logo numbers" />
       <span>NUMBERS</span>
-    </div> -->
+    </div>
     <header class="container container-base">
       <h2>ONLINE - GRATUITO</h2>
       <h1>SORTEADOR DE NÚMEROS</h1>
@@ -59,8 +59,35 @@
             <span>Não repetir número</span>
             <label for="unique-number"></label>
           </div>
+
+          <button type="submit">
+            <span>Sortear</span>
+            <img src="assets/icons/arrow-right.svg" alt="" />
+          </button>
         </fieldset>
       </form>
     </main>
+
+    <footer class="container container-base">
+      <div class="questions">
+        <div class="card-question">
+          <img src="assets/icons/person.svg" alt="" />
+          <div class="question-info">
+            <h3>Como funciona o sorteador de números</h3>
+            <p>
+              O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado
+              pelo usuário.
+            </p>
+          </div>
+        </div>
+        <div class="card-question">
+          <img src="assets/icons/person.svg" alt="" />
+          <div class="question-title">
+            <h3>Posso escolher o intervalo dos números?</h3>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
