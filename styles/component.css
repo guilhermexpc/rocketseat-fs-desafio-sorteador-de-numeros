@@ -1,0 +1,93 @@
+fieldset {
+  border: none;
+}
+
+input[type="number"] {
+  all: unset;
+  width: 5.375rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  font: var(--font-display-small);
+  color: var(--content-primary);
+  background-color: var(--background-secondary);
+  outline: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+li label {
+  display: block;
+  text-align: center;
+}
+
+.draw-option {
+  display: flex;
+  margin-top: 1.25rem;
+  align-items: center;
+  gap: 0.5rem;
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    border-radius: 16px;
+    /* background-color: lightcoral; */
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--content-tertiary);
+    border-radius: 1rem;
+    -webkit-transition: 0.4s;
+    transition: opacity 0.4s ease;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 0.875rem;
+    width: 0.875rem;
+    left: 0.15rem;
+    bottom: 0.1875rem;
+    border-radius: 50%;
+    background: var(--gradient-background);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider {
+    background: var(--gradient-background);
+  }
+
+  input:checked + .slider:before {
+    background-color: var(--content-tertiary);
+    background-image: none;
+    -webkit-transform: translateX(0.6rem);
+    -ms-transform: translateX(0.6rem);
+    transform: translateX(0.6rem);
+  }
+}

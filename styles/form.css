@@ -1,0 +1,20 @@
+.container form {
+  margin-top: 2.75rem;
+}
+
+form #draw-info p {
+  margin-top: 2px;
+}
+
+#draw-values {
+  margin-top: 2.75rem;
+
+  ul {
+    display: flex;
+    gap: 0.75rem;
+
+    li {
+      /* display:; */
+    }
+  }
+}

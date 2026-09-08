@@ -29,6 +29,11 @@
   --background-tertiary: #24222e;
   --background-brand: #c58de7;
   --background-gray: #3d3d3d;
+  --gradient-background: linear-gradient(90deg, #d586e0 0%, #91a1fa 98.93%);
+  --gradient-background2: linear-gradient(90deg, #fffeff 0%, #d4d4d4 98.93%);
+
+  --gradient-border: linear-gradient(90deg, #77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%, #91a1fa 84.58%);
+  --gradient-content: linear-gradient(90deg, #c7c9cc 0%, #3d3d3d 100%);
 
   --accent-pink: #d586e0;
   --accent-blue: #91a1fa;
@@ -73,8 +78,7 @@
 
 body {
   min-height: 100vh;
-  background-color: rgb(25, 25, 25);
-  background-color: var(--background-primary);
+  background-color: var(--background-tertiary);
   font: var(--font-paragraph-medium);
   color: var(--content-tertiary);
 }
@@ -152,4 +156,8 @@ div.hidden {
   width: calc(100%);
   padding-inline: var(--px-sm);
   padding-block: var(--py-sm);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
