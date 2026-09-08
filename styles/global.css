@@ -73,6 +73,7 @@
 
 body {
   min-height: 100vh;
+  background-color: rgb(25, 25, 25);
   background-color: var(--background-primary);
   font: var(--font-paragraph-medium);
   color: var(--content-tertiary);

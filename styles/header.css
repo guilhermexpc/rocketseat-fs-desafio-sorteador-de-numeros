@@ -1,0 +1,34 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  & img {
+    width: 2.375rem;
+    height: 2.375rem;
+    object-fit: cover;
+  }
+
+  & span {
+    font-family: var(--ff-sora);
+    font-size: 1.5rem;
+    font-weight: var(--fw-xbd);
+    line-height: 130%;
+    letter-spacing: -0.04em;
+  }
+}
+
+header {
+  margin-top: 3rem;
+
+  & h2 {
+    font: var(--font-overline);
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #c7c9cc 0%, #3d3d3d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
