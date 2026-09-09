@@ -138,6 +138,10 @@ ul[role="list"] {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 div.hidden {
   display: none;
 }

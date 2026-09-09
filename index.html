@@ -41,7 +41,7 @@
             <ul role="list">
               <li>
                 <label for="quantity" class="uppercase">Números</label>
-                <input type="number" id="quantity" name="quantity" min="1" max="8" required placeholder="2" value="" />
+                <input type="number" id="quantity" name="quantity" min="1" max="16" required placeholder="2" value="" />
               </li>
               <li>
                 <label for="min-value" class="uppercase">de</label>
@@ -88,10 +88,10 @@
           </fieldset>
         </form>
 
-        <div class="result">
+        <div class="result hidden">
           <h2>Resultado do sorteio</h2>
           <span>1º Resultado</span>
-          <ul role="list">
+          <ul role="list" id="result-list">
             <li>23</li>
             <li>12</li>
             <li>23</li>
@@ -102,6 +102,10 @@
             <li>23</li>
             <li>12</li>
           </ul>
+          <button id="btn-reroll">
+            <span>Sortear novamente</span>
+            <img src="assets/icons/youtube.svg" alt="" />
+          </button>
         </div>
       </main>
 

@@ -2,11 +2,15 @@ const drawQty = document.getElementById("quantity");
 const drawMinValue = document.getElementById("min-value");
 const drawMaxValue = document.getElementById("max-value");
 const btnSubmit = document.getElementById("btn-submit");
+const btnReroll = document.getElementById("btn-reroll");
 const form = document.querySelector("form");
+const result = document.querySelector(".result");
+const resultList = document.getElementById("result-list");
 
 console.log(drawQty);
 console.log(drawMinValue);
 console.log(drawMaxValue);
+console.log(resultList);
 
 drawMinValue.addEventListener("input", () => {
   drawMinValue.setCustomValidity("");
@@ -28,7 +32,14 @@ form.onsubmit = (event) => {
 
   console.log("Formulário válido");
   drawNumbers(drawValue, minValue, maxValue);
+
   form.reset();
+};
+
+btnReroll.onclick = () => {
+  form.classList.remove("hidden");
+  result.classList.add("hidden");
+  resultList.innerHTML = "";
 };
 
 function validadeForm() {
@@ -40,6 +51,8 @@ function validadeForm() {
     return false;
   }
 
+  form.classList.add("hidden");
+  result.classList.remove("hidden");
   return true;
 }
 
@@ -52,4 +65,14 @@ function drawNumbers(drawQty, minValue, maxValue) {
   }
 
   console.log(drawResults);
+  showResult(drawResults);
+}
+
+function showResult(results) {
+  resultList.innerHTML = "";
+  results.forEach((element) => {
+    const item = document.createElement("li");
+    item.textContent = String(element).padStart(2, "0");
+    resultList.append(item);
+  });
 }
