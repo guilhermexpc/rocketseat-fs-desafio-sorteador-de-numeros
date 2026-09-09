@@ -21,10 +21,13 @@ form.onsubmit = (event) => {
   if (!validadeForm()) {
     return;
   }
+  const drawValue = Number(drawQty.value);
   const minValue = Number(drawMinValue.value);
   const maxValue = Number(drawMaxValue.value);
+  console.log(`drawValue[${drawValue}] minValue[${minValue}] maxValue[${maxValue}]`);
 
   console.log("Formulário válido");
+  drawNumbers(drawValue, minValue, maxValue);
   form.reset();
 };
 
@@ -38,4 +41,15 @@ function validadeForm() {
   }
 
   return true;
+}
+
+function drawNumbers(drawQty, minValue, maxValue) {
+  const drawResults = [];
+
+  for (let i = 0; i < drawQty; i++) {
+    const randomNumber = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+    drawResults.push(randomNumber);
+  }
+
+  console.log(drawResults);
 }

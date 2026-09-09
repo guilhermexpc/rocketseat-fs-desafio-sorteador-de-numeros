@@ -1,0 +1,31 @@
+.result {
+  margin-top: 2.5rem;
+  text-align: center;
+
+  span {
+    display: block;
+    margin-top: 0.25rem;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    height: 9rem;
+    margin-top: 2.5rem;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: #080808ab;
+    border-radius: 0.75rem;
+
+    li {
+      font-family: var(--ff-roboto-flex);
+      font-weight: var(--fw-bd);
+      line-height: 150%;
+      font-size: 3rem;
+      color: var(--content-brand);
+    }
+  }
+}
