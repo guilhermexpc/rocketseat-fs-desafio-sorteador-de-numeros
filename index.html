@@ -14,6 +14,8 @@
     <title>Sorteador de Numero</title>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles/index.css" />
+
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container logo">
@@ -39,15 +41,15 @@
             <ul role="list">
               <li>
                 <label for="quantity" class="uppercase">Números</label>
-                <input type="number" id="quantity" name="quantity" min="1" required placeholder="5" value="2" />
+                <input type="number" id="quantity" name="quantity" min="1" max="3" required placeholder="2" value=""" />
               </li>
               <li>
                 <label for="min-value" class="uppercase">de</label>
-                <input type="number" id="min-value" name="min-value" required placeholder="1" value="1" />
+                <input type="number" id="min-value" name="min-value" min="1" max="100" required placeholder="1" value="" />
               </li>
               <li>
-                <label for="max-value" class="uppercase">de</label>
-                <input type="number" id="max-value" name="max-value" required placeholder="100" value="100" />
+                <label for="max-value" class="uppercase">até</label>
+                <input type="number" id="max-value" name="max-value" min="1" max="100" required placeholder="100" value="" />
               </li>
             </ul>
 
@@ -61,7 +63,7 @@
               <label for="unique-number"></label>
             </div>
 
-            <button type="submit">
+            <button type="submit" id="btn-submit">
               <span>Sortear</span>
               <img src="assets/icons/arrow-right.svg" alt="" />
             </button>
