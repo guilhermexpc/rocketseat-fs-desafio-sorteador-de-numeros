@@ -3,6 +3,7 @@ const drawMinValue = document.getElementById("min-value");
 const drawMaxValue = document.getElementById("max-value");
 const btnSubmit = document.getElementById("btn-submit");
 const btnReroll = document.getElementById("btn-reroll");
+const drawUniqueNumber = document.getElementById("unique-number");
 const form = document.querySelector("form");
 const result = document.querySelector(".result");
 const resultList = document.getElementById("result-list");
@@ -14,24 +15,38 @@ console.log(resultList);
 
 drawMinValue.addEventListener("input", () => {
   drawMinValue.setCustomValidity("");
+  drawQty.setCustomValidity("");
 });
 
 drawMaxValue.addEventListener("input", () => {
-  drawMinValue.setCustomValidity("");
+  drawMaxValue.setCustomValidity("");
+  drawQty.setCustomValidity("");
+});
+
+drawQty.addEventListener("input", () => {
+  drawQty.setCustomValidity("");
+});
+
+drawUniqueNumber.addEventListener("input", () => {
+  drawQty.setCustomValidity("");
 });
 
 form.onsubmit = (event) => {
   event.preventDefault();
-  if (!validadeForm()) {
-    return;
-  }
+
   const drawValue = Number(drawQty.value);
   const minValue = Number(drawMinValue.value);
   const maxValue = Number(drawMaxValue.value);
+  const isUniqueNumber = Boolean(drawUniqueNumber.checked);
+
+  if (!validadeForm(drawValue, minValue, maxValue, isUniqueNumber)) {
+    return;
+  }
+
   console.log(`drawValue[${drawValue}] minValue[${minValue}] maxValue[${maxValue}]`);
 
   console.log("Formulário válido");
-  drawNumbers(drawValue, minValue, maxValue);
+  drawNumbers(drawValue, minValue, maxValue, isUniqueNumber);
 
   form.reset();
 };
@@ -42,11 +57,19 @@ btnReroll.onclick = () => {
   resultList.innerHTML = "";
 };
 
-function validadeForm() {
+function validadeForm(drawValue, minValue, maxValue, isUniqueNumber) {
   drawMinValue.setCustomValidity("");
 
-  if (Number(drawMinValue.value) >= Number(drawMaxValue.value)) {
+  if (minValue >= maxValue) {
     drawMinValue.setCustomValidity(`O valor precisa ser menor que ${drawMaxValue.value}`);
+    form.reportValidity();
+    return false;
+  }
+
+  const availableNumbers = maxValue - minValue + 1 - drawValue;
+  console.log(availableNumbers);
+  if (isUniqueNumber && availableNumbers < 0) {
+    drawQty.setCustomValidity("A quantidade de números sorteados precisa ser menor que os números unicos disponíveis");
     form.reportValidity();
     return false;
   }
@@ -56,12 +79,23 @@ function validadeForm() {
   return true;
 }
 
-function drawNumbers(drawQty, minValue, maxValue) {
+function drawNumbers(drawQty, minValue, maxValue, isUniqueNumber) {
   const drawResults = [];
 
-  for (let i = 0; i < drawQty; i++) {
-    const randomNumber = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
-    drawResults.push(randomNumber);
+  if (isUniqueNumber) {
+    while (drawResults.length < drawQty) {
+      const number = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+
+      if (!drawResults.includes(number)) {
+        drawResults.push(number);
+      }
+      console.log(drawResults);
+    }
+  } else {
+    for (let i = 0; i < drawQty; i++) {
+      const randomNumber = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+      drawResults.push(randomNumber);
+    }
   }
 
   console.log(drawResults);
